@@ -1,4 +1,4 @@
-('C:\\Users\\Marcelo\\Documents\\Github\\python_automatizar-descargas\\build\\automatizacion\\PYZ-00.pyz',
+('C:\\Users\\Marcelo\\Documents\\Github\\python_automatizacion-descargas\\build\\automatizacion\\PYZ-00.pyz',
  [('multiprocessing.popen_spawn_posix',
    'C:\\Users\\Marcelo\\AppData\\Local\\Programs\\Python\\Python310\\lib\\multiprocessing\\popen_spawn_posix.py',
    'PYMODULE'),
