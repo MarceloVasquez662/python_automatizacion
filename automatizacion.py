@@ -13,7 +13,7 @@ def crearCarpetas():
         if extension=="":
             carpetas.append(nombre_carpeta) 
 
-    if "Video" or "Texto" or "Fotos" or "Otros" not in carpetas:
+    if "Video" or "Texto" or "Fotos" or "Otros" or "Ejecutables" not in carpetas:
         if "Video" not in carpetas:
             os.makedirs(ruta_descargas + "Video")
         if "Texto" not in carpetas:
@@ -22,12 +22,15 @@ def crearCarpetas():
             os.makedirs(ruta_descargas + "Fotos")
         if "Otros" not in carpetas:
             os.makedirs(ruta_descargas + "Otros")
+        if "Ejecutables" not in carpetas:
+            os.makedirs(ruta_descargas + "Ejecutables")
 
 
 #Definicion de extensiones de archivos
 ext_foto=[".png",".jpg",".jpeg",".gif",".psd",".bmp",".svg"]
 ext_video=[".mp4",".avi",".mkv",".flv",".mov",".wmv",".divx"]
 ext_texto=[".docx",".doc",".txt",".pdf",".pptx"]
+ext_ejecutables=[".exe", ".dll", ".cmd", ".bat"]
 
 #Funcion ordenar archivos segun extension
 def ordenarArchivos(archivo, extension):
@@ -43,6 +46,10 @@ def ordenarArchivos(archivo, extension):
     for i in ext_foto:
         if extension == i:
             shutil.move(ruta_descargas+archivo, ruta_descargas+"Fotos")
+            move=True
+    for i in ext_ejecutables:
+        if extension==i:
+            shutil.move(ruta_descargas+archivo, ruta_descargas+"Ejecutables")
             move=True
 
     if extension!="" and move==False:
